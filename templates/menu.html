@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="header-content">Welcome to Firemation</h1>
+<div>
+    <div class="form-group pt-5 pb-3">
+        <a href="{% url 'firemation_app:create_rule' %}">
+            <input class="btn btn-primary form-control" type="submit" name="create" value="Create Rule">
+        </a>
+    </div>
+    <div class="form-group pt-3 pb-3">
+        <a href="{% url 'firemation_app:read_rule' %}">
+            <input class="btn btn-primary form-control" type="submit" name="read" value="Read Rule">
+        </a>
+    </div>
+    <div class="form-group pt-3 pb-3">
+        <a href="{% url 'firemation_app:update_rule' %}">
+            <input class="btn btn-primary form-control" type="submit" name="update" value="Update Rule">
+        </a>
+    </div>
+    <div class="form-group pt-3 pb-3">
+        <a href="{% url 'firemation_app:delete_rule' %}">
+            <input class="btn btn-primary form-control" type="submit" name="delete" value="Delete Rule">
+        </a>
+    </div>
+</div>
+
+{% endblock %}

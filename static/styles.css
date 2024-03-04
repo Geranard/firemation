@@ -1,0 +1,69 @@
+header{
+    /* background-color: #252A34; */
+    background: #252A34;
+}
+
+/* .firemation-logo{
+    width: 20vw;
+    height: 6.6vh;
+} */
+
+.firemation-logo-1{
+    color: #FF2E63;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: "Montserrat";
+}
+
+.firemation-logo-2{
+    color: #08D9D6;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: "Montserrat";
+}
+
+.content{
+    padding-top: 0vh;
+}
+
+.btn-primary{
+    border: none;
+    background: #252A34;
+    color: #FFFFFF;
+    width: 40vw;
+}
+
+.drop-title{
+    color: #444444;
+    font-size: 20px;
+    padding-top: 4vh;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+}
+
+.drop-container{
+    padding: 5vh 5vw;
+    border-radius: 10px;
+    border: 2px dashed #000000;
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+.drop-container:hover{
+    background: #EEEEEE;
+}
+
+input[type=file]::file-selector-button{
+    border: none;
+    background: #252A34;
+    padding: 2vh 2vw;
+    border-radius: 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover{
+    background: #FFFFFF;
+}

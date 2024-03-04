@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="header-content">Create Rule</h1>
+<div class="d-flex flex-column justify-content-center align-items-center align-content-center">
+    <form class="d-flex flex-column justify-content-center align-items-center align-content-center pt-5" action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group d-flex flex-column justify-content-center align-items-center align-content-center pb-5 drop-container">
+            <label class="form-label drop-title">Drop CSV File Here</label>
+            <p class="">Or</p>
+            <input class="form-control custom-file-input" type="file" name="csv" access=".csv" data-height="500" required>
+            <p style="color: red">*WARNING: PLEASE DO NOT REFRESH WHILE THE BROWSER IS LOADING</p>
+        </div>
+
+        <p class="text-center">CSV Format: Source,Destination,Service,Action,Description<br>For service, you can use protocol/port, protocol/service, tcp-udp, or icmp.<br>You can use comma to seperate each value inside a column.<br>Every first item in Description column will be the name of the rule in Fortinet and PAN.</p>
+
+        <div class="form-group pt-2 pb-2">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmation-modal">
+                Submit
+            </button>
+        </div>
+
+        <div class="modal fade" id="confirmation-modal" data-bs-toggle="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirmation-modal-label">Confirmation</h5>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure want to submit?
+                    </div>
+                    <div class="modal-footer">
+                        <button style="background-color:red" class="btn btn-secondary" type="button" data-bs-dismiss="modal" data-bs-target="#confirmation-modal">Close</button>
+                        <input style="background-color:green" class="btn btn-secondary" type="submit" data-bs-toggle="modal" data-bs-target="#notification-modal" data-bs-dismiss="modal">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <a href="{% url 'firemation_app:menu' %}">
+        <input class="btn btn-primary form-control" type="submit" name="back" value="Back">
+    </a>
+</div>
+{% endblock %}
