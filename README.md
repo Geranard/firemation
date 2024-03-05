@@ -7,6 +7,10 @@ The tool is tested in:
 - Ubuntu Server 20.04.6 VMWare
 - Python version 3.8.10
 - Netbox version 4.3
+- GNS3 version 2.2.43
+- Cisco ASA version 9.8.3
+- Fortigate Fortinet version 6.0.3
+- Palo Alto Networks version 9.0.4
 
 # Features
 - Bulk Create Rule to Cisco ASA, Fortinet Fortigate, and Palo Alto Networks NGFW using CSV
