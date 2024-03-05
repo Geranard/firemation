@@ -1,9 +1,7 @@
 from django.db import models
-import uuid
 
 # Create your models here.
 class User(models.Model):
-    # user_id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     username = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
     selected = models.BooleanField(default=False)
